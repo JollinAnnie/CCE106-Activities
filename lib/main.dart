@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:joanneflutter1/pavlova.dart';
-//import 'package:joanneflutter1/edgeinsets.dart';
+// import 'package:joanneflutter1/pavlova.dart';
+import 'package:joanneflutter1/edgeinsets.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
 
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Pavlova(),
+      home: const Edgeinsets(),
     );
   }
 }

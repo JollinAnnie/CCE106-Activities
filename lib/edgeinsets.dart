@@ -3,62 +3,59 @@ import 'package:flutter/material.dart';
 class Edgeinsets extends StatelessWidget {
   const Edgeinsets({super.key});
 
-  Widget edgeBox(String text, Color color, EdgeInsets margin, double height) {
-    return Container(
-      height: height,
-      margin: margin,
-      color: color,
-      alignment: Alignment.center,
-      child: Text(
-        text,
-        style: TextStyle(
-          fontSize: 11,
-          color: color == Colors.blue || color == Colors.green
-              ? Colors.white
-              : Colors.black,
-        ),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar( title:Text('Cabarde_Activity 4'
-        ),
+      appBar: AppBar(
+        title: const Text('Joanne Cabarde - Activity 4'),
       ),
-      backgroundColor: Colors.purple.shade50,
-      body: SafeArea(
+      body: Center(
         child: Column(
           children: [
-            edgeBox(
-              'EdgeInsets.all(30)',
-              Colors.red,
-              const EdgeInsets.all(30),
-              60,
-            ),
-            edgeBox(
-              'EdgeInsets.symmetric(horizontal: 40, vertical: 10)',
-              Colors.yellow,
-              const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
-              30,
-            ),
-            edgeBox(
-              'EdgeInsets.only(left: 30, top: 10, right: 5, bottom: 20)',
-              Colors.blue,
-              const EdgeInsets.only(
-                left: 30,
-                top: 10,
-                right: 5,
-                bottom: 20,
+
+            // EdgeInsets.all()
+            Container(
+              color: Colors.grey[300],
+              child: Container(
+                padding: EdgeInsets.all(30),
+                color: Colors.red,
+                child: Text('EdgeInSets.all(30)'),
               ),
-              35,
             ),
-            edgeBox(
-              'EdgeInsets.fromLTRB(10, 20, 30, 40)',
-              Colors.green,
-              const EdgeInsets.fromLTRB(10, 20, 30, 40),
-              60,
+
+            const SizedBox(height: 30),
+            // EdgeInsets.symmetric()
+            Container(
+              color: Colors.grey[300],
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+                color: Colors.yellow,
+                child: Text('EdgeInSets.symmetric(horizontal: 40, vertical: 10)'),
+              ),
+            ),
+
+            const SizedBox(height: 30),
+            // EdgeInsets.only()
+            Container(
+              color: Colors.grey[300],
+              child: Container(
+                padding: EdgeInsets.only(left: 10, top: 10, right: 5, bottom: 20),
+                color: Colors.blue,
+                child: Text('EdgeInSets.only(left: 10, top: 10, right: 5, bottom: 20)',
+                    style: TextStyle(color: Colors.white)),
+              ),
+            ),
+
+            const SizedBox(height: 30),
+            // EdgeInsets.LTRB()
+            Container(
+              color: Colors.grey[300],
+              child: Container(
+                padding: EdgeInsets.fromLTRB(10, 20, 30, 40),
+                color: Colors.green,
+                child: Text('EdgeInSets.fromLTRB(10, 20, 30, 40)',
+                    style: TextStyle(color: Colors.white)),
+              ),
             ),
           ],
         ),
