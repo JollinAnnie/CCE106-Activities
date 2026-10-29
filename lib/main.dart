@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 // import 'package:joanneflutter1/pavlova.dart';
-import 'package:joanneflutter1/edgeinsets.dart';
+// import 'package:joanneflutter1/edgeinsets.dart';
+// import 'package:joanneflutter1/mainalignment.dart';
+import 'package:joanneflutter1/crossalignment.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -15,9 +18,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
 
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const Edgeinsets(),
+      home: const CrossAlignment(),
     );
   }
 }
